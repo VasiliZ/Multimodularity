@@ -10,11 +10,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.multimodularity.di.components.ActivityComponent
 import com.example.multimodularity.ui.theme.MultimodularityTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        ActivityComponent.init()
+
         setContent {
             MultimodularityTheme {
                 // A surface container using the 'background' color from the theme
