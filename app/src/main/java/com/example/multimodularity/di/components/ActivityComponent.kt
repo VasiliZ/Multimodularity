@@ -1,11 +1,6 @@
 package com.example.multimodularity.di.components
 
-import com.example.core.provider.AppDependencyProvider
-import com.example.core.provider.NetworkProvider
-import com.example.core_network.di.component.NetworkRetrofitComponent
-import dagger.Component
-import javax.inject.Singleton
-
+/*
 @Singleton
 @Component(
     dependencies = [
@@ -29,4 +24,4 @@ interface ActivityComponent : AppDependencyProvider {
                 }
         }
     }
-}
+}*/

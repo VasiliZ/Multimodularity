@@ -17,3 +17,4 @@ rootProject.name = "Multimodularity"
 include(":app")
 include(":core")
 include(":core_network")
+include(":main_movie_screen")

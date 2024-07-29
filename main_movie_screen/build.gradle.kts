@@ -5,11 +5,14 @@ plugins {
 }
 
 android {
-    namespace = "com.example.core"
+    namespace = "com.example.multymodularity.main_movie_screen"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 28
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -28,6 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         compose = true
     }
@@ -38,8 +42,9 @@ android {
 
 dependencies {
 
-    implementation(libs.compose)
-    implementation(libs.android)
+    implementation(project(":core"))
+    implementation(project(":core_network"))
     implementation(libs.dagger)
     ksp(libs.daggerCompiler)
+    implementation(libs.compose)
 }

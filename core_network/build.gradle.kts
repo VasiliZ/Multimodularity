@@ -35,6 +35,7 @@ dependencies {
     implementation(project(":core"))
     implementation(libs.android)
     implementation(libs.dagger)
+    implementation(libs.compose)
     implementation(libs.retrofit)
     ksp(libs.daggerCompiler)
 }

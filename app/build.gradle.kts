@@ -55,6 +55,7 @@ dependencies {
 
     implementation(project(":core"))
     implementation(project(":core_network"))
+    implementation(project(":main_movie_screen"))
 
     implementation(libs.android)
     implementation(libs.compose)
