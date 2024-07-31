@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class CatListViewModel
 @Inject constructor(
-    private val getCats: GetCats
+    getCats: GetCats
 ) : ViewModel() {
 
     private val _cats = getCats.invoke()
