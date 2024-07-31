@@ -8,20 +8,20 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.core.navigarion.find
 import com.example.multimodularity.di.components.LocalAppProvider
-import com.example.multymodularity.main_movie_screen.api.MovieListEntry
+import com.example.multymodularity.main_cat_screen.api.CatListEntry
 
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
     val destinations = LocalAppProvider.current.destinations
 
-    val movieList = destinations.find<MovieListEntry>()
+    val catList = destinations.find<CatListEntry>()
 
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
-        NavHost(navController, startDestination = movieList.destination()) {
-            with(movieList) {
+        NavHost(navController, startDestination = catList.destination()) {
+            with(catList) {
                 composable(navController, destinations)
             }
         }

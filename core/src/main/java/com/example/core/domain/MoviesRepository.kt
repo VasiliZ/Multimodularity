@@ -1,6 +1,13 @@
 package com.example.core.domain
 
-interface MoviesRepository {
+import androidx.paging.PagingData
+import kotlinx.coroutines.flow.Flow
 
-    fun getMovies()
+interface CatsRepository {
+
+    companion object {
+        const val PAGE_SIZE = 10
+    }
+
+    fun getCats(): Flow<PagingData<Cat>>
 }

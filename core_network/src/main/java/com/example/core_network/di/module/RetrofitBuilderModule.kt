@@ -1,7 +1,7 @@
 package com.example.core_network.di.module
 
-import com.example.core_network.di.api.MovieApi
-import com.example.core_network.di.api.MovieApi.Companion.BASE_URL
+import com.example.core_network.di.api.CatApi
+import com.example.core_network.di.api.CatApi.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -20,10 +20,10 @@ object RetrofitBuilderModule {
 
     @Provides
     @Singleton
-    fun provideRetrofitBuilder(
+    fun provideCatApi(
         okHttpClient: OkHttpClient,
         gsonConverterFactory: GsonConverterFactory
-    ): MovieApi {
+    ): CatApi {
         return Retrofit.Builder()
             .addConverterFactory(gsonConverterFactory)
             .client(okHttpClient)

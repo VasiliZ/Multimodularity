@@ -28,6 +28,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
 }
 
 dependencies {
@@ -36,6 +37,7 @@ dependencies {
     implementation(libs.android)
     implementation(libs.dagger)
     implementation(libs.compose)
+    implementation(libs.paging)
     implementation(libs.retrofit)
     ksp(libs.daggerCompiler)
 }

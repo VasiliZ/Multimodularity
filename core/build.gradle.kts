@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -7,9 +9,11 @@ plugins {
 android {
     namespace = "com.example.core"
     compileSdk = 34
-
+    buildFeatures.buildConfig = true
     defaultConfig {
         minSdk = 28
+        val apiKey = gradleLocalProperties(rootDir).getProperty("apiKey")
+        buildConfigField("String", "API_KEY", "\"${apiKey}\"")
     }
 
     buildTypes {
@@ -34,11 +38,13 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = versions.composeCompiler
     }
+
 }
 
 dependencies {
 
     implementation(libs.compose)
+    implementation(libs.paging)
     implementation(libs.android)
     implementation(libs.dagger)
     ksp(libs.daggerCompiler)
