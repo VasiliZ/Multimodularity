@@ -10,14 +10,15 @@ import com.example.multymodularity.main_movie_screen.ui.LoadingDataScreenState
 
 @Composable
 fun CatListScreen(
-    viewModel: CatListViewModel
+    viewModel: CatListViewModel,
+    onCatItemClicked: (catId: String) -> Unit
 ) {
     val catList = viewModel.cats.collectAsLazyPagingItems()
 
     Crossfade(catList.loadState.refresh) {
         when (it) {
             is LoadState.Loading -> LoadingDataScreenState()
-            else -> LoadedDataScreenState(catList)
+            else -> LoadedDataScreenState(catList, onCatItemClicked)
         }
     }
 }

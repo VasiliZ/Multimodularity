@@ -6,6 +6,8 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.core.domain.Cat
 import com.example.core.domain.CatsRepository
+import com.example.core_network.di.api.CatApi
+import com.example.core_network.di.mapping.DataMapperImpl
 import com.example.core_network.di.paging.PaginationSource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
@@ -14,11 +16,17 @@ private const val PREFETCH_DISTANCE = 2
 
 class CatsRepositoryImpl
 @Inject constructor(
-    private val source: PaginationSource
+    private val catListSource: PaginationSource,
+    private val catApi: CatApi,
+    private val mapperImpl: DataMapperImpl
 ) : CatsRepository {
 
     override fun getCats(): Flow<PagingData<Cat>> {
         return configurePager()
+    }
+
+    override suspend fun getCat(id: String): Cat {
+        return mapperImpl.responseToDomain(catApi.getCat(id))
     }
 
     @OptIn(ExperimentalPagingApi::class)
@@ -30,7 +38,7 @@ class CatsRepositoryImpl
                 prefetchDistance = PREFETCH_DISTANCE
             ),
             remoteMediator = null,
-            pagingSourceFactory = { source }
+            pagingSourceFactory = { catListSource }
         ).flow
     }
 }

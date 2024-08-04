@@ -17,7 +17,10 @@ private const val GRID_CELL_COUNT = 2
 private const val LOADING_PART_SPAN_VALUE = 2
 
 @Composable
-fun LoadedDataScreenState(catList: LazyPagingItems<Cat>) {
+fun LoadedDataScreenState(
+    catList: LazyPagingItems<Cat>,
+    onCatItemClicked: (catId: String) -> Unit
+) {
 
     LazyVerticalGrid(
         modifier = Modifier
@@ -29,7 +32,7 @@ fun LoadedDataScreenState(catList: LazyPagingItems<Cat>) {
     ) {
         items(catList.itemCount) {
             catList[it]?.let {
-                CatItem(it)
+                CatItem(it, onCatItemClicked)
             }
         }
 

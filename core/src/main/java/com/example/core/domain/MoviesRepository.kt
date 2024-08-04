@@ -10,4 +10,6 @@ interface CatsRepository {
     }
 
     fun getCats(): Flow<PagingData<Cat>>
+
+    suspend fun getCat(id: String): Cat?
 }

@@ -3,9 +3,11 @@ package com.example.multymodularity.main_cat_screen.impl
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import com.example.api.CatDetailsEntry
 import com.example.core.common.di.LocalCommonProvider
 import com.example.core.common.di.injectedViewModel
 import com.example.core.navigarion.Destinations
+import com.example.core.navigarion.find
 import com.example.core_network.di.component.LocalDataProvider
 import com.example.multymodularity.main_cat_screen.api.CatListEntry
 import com.example.multymodularity.main_cat_screen.impl.di.DaggerCatListComponent
@@ -32,6 +34,12 @@ class CatListEntryImpl
                 .viewModel
         }
 
-        CatListScreen(viewModel)
+        CatListScreen(viewModel) {
+            navController.navigate(
+                destinations
+                    .find<CatDetailsEntry>()
+                    .destination(catId = it)
+            )
+        }
     }
 }

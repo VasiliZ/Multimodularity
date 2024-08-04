@@ -45,6 +45,7 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":core_network"))
     implementation(project(":ui_core"))
+    implementation(project(":cat_item_feature"))
     implementation(libs.dagger)
     ksp(libs.daggerCompiler)
     implementation(libs.compose)

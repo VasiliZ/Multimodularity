@@ -1,6 +1,7 @@
 package com.example.multymodularity.main_movie_screen.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -23,10 +24,17 @@ import com.example.multymodularity.ui_core.ext.clipRoundedCorner8dp
 import com.example.multymodularity.ui_core.ext.gradientColor
 
 @Composable
-fun CatItem(cat: Cat) {
+fun CatItem(
+    cat: Cat,
+    onCatItemClicked: (catId: String) -> Unit
+) {
 
     Card(
-        modifier = Modifier.clipRoundedCorner8dp()
+        modifier = Modifier
+            .clipRoundedCorner8dp()
+            .clickable {
+                onCatItemClicked(cat.id)
+            }
     ) {
         Box {
             SubcomposeAsyncImage(

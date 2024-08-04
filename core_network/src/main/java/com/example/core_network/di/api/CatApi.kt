@@ -22,4 +22,9 @@ interface CatApi {
     suspend fun getImage(
         @Path("imageId") imageId: String
     ): CatImageResponse
+
+    @GET("breeds/{breed_id}")
+    suspend fun getCat(
+        @Path("breed_id") breedId: String
+    ): CatItemResponse
 }
