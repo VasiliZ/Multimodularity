@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cat_card_height">240dp</dimen>
+    <dimen name="cat_card_gradient_height">100dp</dimen>
+    <dimen name="append_list_loading_item_height">40dp</dimen>
+</resources>

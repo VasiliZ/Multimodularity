@@ -8,7 +8,7 @@ class DataMapperImpl
 @Inject constructor() : DataMapper {
     override fun responseToDomain(cat: CatItemResponse): Cat {
         return with(cat) {
-            Cat(id = id)
+            Cat(id = id, name = name)
         }
     }
 }

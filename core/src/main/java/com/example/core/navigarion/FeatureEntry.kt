@@ -1,6 +1,9 @@
 package com.example.core.navigarion
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavDeepLink
@@ -25,7 +28,9 @@ interface ComposableFeatureEntry : FeatureEntry {
 
     fun NavGraphBuilder.composable(navController: NavHostController, destinations: Destinations) {
         composable(featureRoute, arguments, deepLinks) { backStackEntry ->
-            Composable(navController, destinations, backStackEntry)
+            Box(modifier = Modifier.fillMaxSize()) {
+                Composable(navController, destinations, backStackEntry)
+            }
         }
     }
 

@@ -8,5 +8,5 @@ data class CatItemResponse(
     @SerializedName("name")
     val name: String,
     @SerializedName("reference_image_id")
-    val imageId: String?
+    val imageId: String?,
 )

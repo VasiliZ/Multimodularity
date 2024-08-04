@@ -1,11 +1,10 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.example.multymodularity.main_cat_screen"
+    namespace = "com.example.multymodularity.ui_core"
     compileSdk = 34
 
     defaultConfig {
@@ -28,25 +27,19 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-
     buildFeatures {
         compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = versions.composeCompiler
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
 
-    implementation(project(":core"))
-    implementation(project(":core_network"))
-    implementation(project(":ui_core"))
-    implementation(libs.dagger)
-    ksp(libs.daggerCompiler)
+    implementation(libs.android)
     implementation(libs.compose)
-    implementation(libs.paging)
 }
