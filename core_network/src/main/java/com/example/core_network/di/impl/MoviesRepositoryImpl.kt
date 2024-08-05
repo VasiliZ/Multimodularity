@@ -26,7 +26,15 @@ class CatsRepositoryImpl
     }
 
     override suspend fun getCat(id: String): Cat {
-        return mapperImpl.responseToDomain(catApi.getCat(id))
+
+        val response = catApi.getCat(id)
+        val catImage = if (response.imageId != null) {
+            catApi.getImage(response.imageId)
+        } else null
+
+        val result = response.copy(imageId = catImage?.url)
+
+        return mapperImpl.responseToDomain(result)
     }
 
     @OptIn(ExperimentalPagingApi::class)

@@ -5,6 +5,8 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.example.core.navigarion.AggregateFeatureEntry
 
+private const val NAVIGATE_PATH = "cat-details/"
+
 abstract class CatDetailsEntry : AggregateFeatureEntry {
 
     protected companion object {
@@ -18,8 +20,8 @@ abstract class CatDetailsEntry : AggregateFeatureEntry {
     )
 
     fun destination(catId: String): String {
-        return "cat-details/$catId"
+        return "$NAVIGATE_PATH$catId"
     }
 
-    final override val featureRoute: String = "cat-details/{$ARG_CAT_ID}"
+    final override val featureRoute: String = "$NAVIGATE_PATH{$ARG_CAT_ID}"
 }

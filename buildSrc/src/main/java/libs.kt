@@ -5,7 +5,7 @@ object versions {
     const val lifecycle = "2.7.0"
     const val coroutines = "1.8.1"
     const val composeCompiler = "1.5.14"
-    const val compose = "1.6.8"
+    const val compose = "1.7.0-beta06"
     const val dagger = "2.48"
     const val retrofit = "2.9.0"
     const val material3Compose = "1.2.1"

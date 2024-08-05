@@ -6,9 +6,17 @@ import javax.inject.Inject
 
 class DataMapperImpl
 @Inject constructor() : DataMapper {
+
     override fun responseToDomain(cat: CatItemResponse): Cat {
         return with(cat) {
-            Cat(id = id, name = name)
+            Cat(
+                id = id,
+                name = name,
+                image = imageId,
+                description = description,
+                weight = weight.weight,
+                url = url
+            )
         }
     }
 }

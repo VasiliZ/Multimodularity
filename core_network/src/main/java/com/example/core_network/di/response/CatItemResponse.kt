@@ -9,4 +9,10 @@ data class CatItemResponse(
     val name: String,
     @SerializedName("reference_image_id")
     val imageId: String?,
+    @SerializedName("description")
+    val description: String,
+    @SerializedName("weight")
+    val weight: CatWeight,
+    @SerializedName("wikipedia_url")
+    val url: String
 )

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cat_weight_placeholder">Weight %s</string>
+    <string name="see_more_label">see more:\u0020</string>
+</resources>

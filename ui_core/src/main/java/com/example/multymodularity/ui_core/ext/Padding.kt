@@ -6,3 +6,4 @@ import androidx.compose.ui.unit.dp
 
 fun Modifier.padding16() = this.padding(16.dp)
 fun Modifier.bottomPadding16() = this.padding(bottom = 16.dp)
+fun Modifier.horizontalPadding16() = this.padding(horizontal = 16.dp)
