@@ -6,10 +6,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.example.api.CatDetailsEntry
+import com.example.multimodularity.detail.api.CatDetailsEntry
 import com.example.core.navigarion.find
 import com.example.multimodularity.di.components.LocalAppProvider
-import com.example.multymodularity.main_cat_screen.api.CatListEntry
+import com.example.multymodularity.mainscreen.api.CatListEntry
 
 @Composable
 fun Navigation() {

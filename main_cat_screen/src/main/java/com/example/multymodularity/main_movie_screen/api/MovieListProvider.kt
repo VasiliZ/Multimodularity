@@ -1,3 +1,0 @@
-package com.example.multymodularity.main_cat_screen.api
-
-interface CatListProvider

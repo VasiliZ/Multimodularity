@@ -1,7 +1,7 @@
 package com.example.multimodularity.di.components
 
-import com.example.multymodularity.cat_item.impl.di.GetCatEntry
-import com.example.multymodularity.main_cat_screen.impl.di.CatListEntryModule
+import com.example.mulrymodularity.mainscreen.impl.di.CatListEntryModule
+import com.example.multimodularity.details.impl.di.GetCatEntry
 import dagger.Module
 
 @Module(
