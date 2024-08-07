@@ -18,7 +18,7 @@ class CatsRepositoryImpl
 @Inject constructor(
     private val catListSource: PaginationSource,
     private val catApi: CatApi,
-    private val mapperImpl: DataMapperImpl
+    private val mapperImpl: DataMapperImpl,
 ) : CatsRepository {
 
     override fun getCats(): Flow<PagingData<Cat>> {
