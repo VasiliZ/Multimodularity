@@ -1,14 +1,14 @@
-package com.example.core_network.di.impl
+package com.example.multymodularity.data.impl.repository
 
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.example.core.domain.Cat
-import com.example.core.domain.CatsRepository
-import com.example.core_network.di.api.CatApi
-import com.example.core_network.di.mapping.DataMapperImpl
-import com.example.core_network.di.paging.PaginationSource
+import com.example.multymodularity.data.impl.CatsRepository
+import com.example.multymodularity.data.impl.api.CatApi
+import com.example.multymodularity.data.impl.domain.Cat
+import com.example.multymodularity.data.impl.mapping.DataMapperImpl
+import com.example.multymodularity.data.impl.paging.PaginationSource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

@@ -56,6 +56,7 @@ dependencies {
 
     implementation(project(":core"))
     implementation(project(":core_network"))
+    implementation(project(":data:impl"))
     implementation(project(":main_screen_feature:impl"))
     implementation(project(":detail_screen_feature:impl"))
 

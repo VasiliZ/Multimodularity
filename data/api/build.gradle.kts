@@ -1,11 +1,10 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.example.mulrymodularity.mainscreen.impl"
+    namespace = "com.example.multymodularity.data.api"
     compileSdk = 34
 
     defaultConfig {
@@ -25,30 +24,19 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "11"
-    }
-
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = versions.composeCompiler
+        jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    api(project(":main_screen_feature:api"))
-    api(project(":detail_screen_feature:api"))
-    implementation(project(":core"))
-    implementation(project(":core_network"))
-    implementation(project(":ui_core"))
-    implementation(project(":data:impl"))
+
+    implementation(libs.android)
     implementation(libs.dagger)
-    ksp(libs.daggerCompiler)
     implementation(libs.compose)
     implementation(libs.paging)
+    implementation(libs.retrofit)
 }

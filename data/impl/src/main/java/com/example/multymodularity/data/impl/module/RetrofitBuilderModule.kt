@@ -1,7 +1,9 @@
-package com.example.core_network.di.module
+package com.example.multymodularity.data.impl.module
 
-import com.example.core_network.di.api.CatApi
-import com.example.core_network.di.api.CatApi.Companion.BASE_URL
+import com.example.core_network.di.module.GsonModule
+import com.example.core_network.di.module.NetworkClientModule
+import com.example.multymodularity.data.impl.api.CatApi
+import com.example.multymodularity.data.impl.api.CatApi.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

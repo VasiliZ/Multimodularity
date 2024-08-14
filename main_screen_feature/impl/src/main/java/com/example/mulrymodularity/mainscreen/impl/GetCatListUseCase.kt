@@ -2,8 +2,8 @@ package com.example.mulrymodularity.mainscreen.impl
 
 import androidx.paging.PagingData
 import com.example.core.common.di.CommonModule.IO
-import com.example.core.domain.Cat
-import com.example.core.domain.CatsRepository
+import com.example.multymodularity.data.impl.CatsRepository
+import com.example.multymodularity.data.impl.domain.Cat
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn

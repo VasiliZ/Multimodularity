@@ -7,10 +7,10 @@ import androidx.navigation.navigation
 import com.example.core.common.di.LocalCommonProvider
 import com.example.core.common.di.injectedViewModel
 import com.example.core.navigarion.Destinations
-import com.example.core_network.di.component.LocalDataProvider
 import com.example.multimodularity.detail.api.CatDetailsEntry
 import com.example.multimodularity.details.impl.di.DaggerCatDetailsComponent
 import com.example.multimodularity.details.impl.ui.CatDetailScreen
+import com.example.multymodularity.data.impl.LocalDataProvider
 import javax.inject.Inject
 
 class CatDetailEntryImpl

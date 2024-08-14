@@ -1,11 +1,11 @@
-package com.example.core_network.di.paging
+package com.example.multymodularity.data.impl.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import coil.network.HttpException
-import com.example.core.domain.Cat
-import com.example.core_network.di.api.CatApi
-import com.example.core_network.di.mapping.DataMapper
+import com.example.multymodularity.data.impl.api.CatApi
+import com.example.multymodularity.data.impl.domain.Cat
+import com.example.multymodularity.data.impl.mapping.DataMapper
 import java.io.IOException
 import javax.inject.Inject
 

@@ -5,6 +5,7 @@ import com.example.core.common.di.DaggerCommonComponent
 import com.example.core_network.di.component.DaggerNetworkComponent
 import com.example.multimodularity.di.components.AppProvider
 import com.example.multimodularity.di.components.DaggerAppComponent
+import com.example.multymodularity.data.impl.di.DaggerRepositoryComponent
 
 class MultiModuleApp : Application() {
 
@@ -18,7 +19,10 @@ class MultiModuleApp : Application() {
         appComponentProvider = DaggerAppComponent
             .builder()
             .commonProvider(commonProvider)
-            .dataProvider(DaggerNetworkComponent.builder().build())
+            .networkProvider(DaggerNetworkComponent.builder().build())
+            .repositoryProvider(
+                DaggerRepositoryComponent.factory().create(DaggerNetworkComponent.builder().build())
+            )
             .build()
     }
 }

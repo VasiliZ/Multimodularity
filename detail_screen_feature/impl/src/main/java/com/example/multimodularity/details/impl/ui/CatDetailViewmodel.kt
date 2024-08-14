@@ -3,9 +3,9 @@ package com.example.multimodularity.details.impl.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.common.di.CommonModule.IO
-import com.example.core.domain.Cat
 import com.example.multimodularity.details.impl.cat.GetCat
 import com.example.multimodularity.details.impl.di.CatId
+import com.example.multymodularity.data.impl.domain.Cat
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch

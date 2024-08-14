@@ -17,8 +17,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.TextAlign
 import coil.compose.SubcomposeAsyncImage
-import com.example.core.domain.Cat
 import com.example.mulrymodularity.mainscreen.impl.R
+import com.example.multymodularity.data.impl.domain.Cat
 import com.example.multymodularity.ui_core.ext.bottomPadding16
 import com.example.multymodularity.ui_core.ext.clipRoundedCorner8dp
 import com.example.multymodularity.ui_core.ext.gradientColor

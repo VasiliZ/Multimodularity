@@ -1,7 +1,7 @@
 package com.example.multimodularity.details.impl.cat
 
-import com.example.core.domain.Cat
-import com.example.core.domain.CatsRepository
+import com.example.multymodularity.data.impl.CatsRepository
+import com.example.multymodularity.data.impl.domain.Cat
 import javax.inject.Inject
 
 fun interface GetCat {

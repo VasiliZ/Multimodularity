@@ -7,9 +7,9 @@ import com.example.core.common.di.LocalCommonProvider
 import com.example.core.common.di.injectedViewModel
 import com.example.core.navigarion.Destinations
 import com.example.core.navigarion.find
-import com.example.core_network.di.component.LocalDataProvider
 import com.example.mulrymodularity.mainscreen.impl.di.DaggerCatListComponent
 import com.example.multimodularity.detail.api.CatDetailsEntry
+import com.example.multymodularity.data.impl.LocalDataProvider
 import com.example.multymodularity.main_cat_screen.ui.CatListScreen
 import com.example.multymodularity.mainscreen.api.CatListEntry
 import javax.inject.Inject
@@ -29,7 +29,7 @@ class CatListEntryImpl
         val viewModel = injectedViewModel {
             DaggerCatListComponent.builder()
                 .commonProvider(commonProvider)
-                .dataProvider(dataProvider)
+                .repositoryProvider(dataProvider)
                 .build()
                 .viewModel
         }

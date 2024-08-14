@@ -1,4 +1,4 @@
-package com.example.core.domain
+package com.example.multymodularity.data.impl.domain
 
 data class Cat(
     val id: String,

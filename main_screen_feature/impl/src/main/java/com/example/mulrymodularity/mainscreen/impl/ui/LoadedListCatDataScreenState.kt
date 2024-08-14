@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.example.core.domain.Cat
+import com.example.multymodularity.data.impl.domain.Cat
 import com.example.multymodularity.ui_core.ext.padding16
 import com.example.multymodularity.ui_core.ext.space16
 

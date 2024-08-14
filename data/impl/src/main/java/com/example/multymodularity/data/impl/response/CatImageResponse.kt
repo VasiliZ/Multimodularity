@@ -1,4 +1,4 @@
-package com.example.core_network.di.response
+package com.example.multymodularity.data.impl.response
 
 import com.google.gson.annotations.SerializedName
 

@@ -9,9 +9,10 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.core.common.di.LocalCommonProvider
-import com.example.core_network.di.component.LocalDataProvider
+import com.example.core_network.di.LocalNetworkProvider
 import com.example.multimodularity.di.components.LocalAppProvider
 import com.example.multimodularity.ui.theme.MultimodularityTheme
+import com.example.multymodularity.data.impl.LocalDataProvider
 
 class MainActivity : ComponentActivity() {
 
@@ -24,7 +25,8 @@ class MainActivity : ComponentActivity() {
                 CompositionLocalProvider(
                     LocalAppProvider provides application.applicationProvider,
                     LocalCommonProvider provides application.applicationProvider,
-                    LocalDataProvider provides application.applicationProvider
+                    LocalDataProvider provides application.applicationProvider,
+                    LocalNetworkProvider provides application.applicationProvider
                 ) {
                     Navigation()
                 }

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.multimodularity.details.impl"
+    namespace = "com.example.multymodularity.data.impl"
     compileSdk = 34
 
     defaultConfig {
@@ -25,37 +25,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
-
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = versions.composeCompiler
-    }
-
 }
 
 dependencies {
-
-
-    implementation("com.google.firebase:firebase-auth:23.0.0")
-
-    api(project(":detail_screen_feature:api"))
-    implementation(project(":core"))
     implementation(project(":core_network"))
-    implementation(project(":ui_core"))
-    implementation(project(":data:impl"))
+    implementation(libs.android)
     implementation(libs.dagger)
-    ksp(libs.daggerCompiler)
     implementation(libs.compose)
-    implementation(libs.coroutines)
     implementation(libs.paging)
-
-
+    implementation(libs.retrofit)
+    ksp(libs.daggerCompiler)
 }

@@ -1,7 +1,7 @@
-package com.example.core_network.di.mapping
+package com.example.multymodularity.data.impl.mapping
 
-import com.example.core.domain.Cat
-import com.example.core_network.di.response.CatItemResponse
+import com.example.multymodularity.data.impl.domain.Cat
+import com.example.multymodularity.data.impl.response.CatItemResponse
 import javax.inject.Inject
 
 class DataMapperImpl
