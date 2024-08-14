@@ -16,6 +16,7 @@ class PaginationSource
     private val remoteSource: CatApi,
     private val mapper: DataMapper
 ) : PagingSource<Int, Cat>() {
+
     override fun getRefreshKey(state: PagingState<Int, Cat>): Int? {
         return state.anchorPosition
     }

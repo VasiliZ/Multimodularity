@@ -1,4 +1,4 @@
-package com.example.multymodularity.main_movie_screen.ui
+package com.example.multymodularity.main_cat_screen.ui
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.runtime.Composable

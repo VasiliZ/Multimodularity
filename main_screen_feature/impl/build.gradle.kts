@@ -41,7 +41,6 @@ android {
 }
 
 dependencies {
-
     api(project(":main_screen_feature:api"))
     api(project(":detail_screen_feature:api"))
     implementation(project(":core"))
@@ -51,4 +50,5 @@ dependencies {
     ksp(libs.daggerCompiler)
     implementation(libs.compose)
     implementation(libs.paging)
+    implementation("com.google.firebase:firebase-auth:22.0.0")
 }

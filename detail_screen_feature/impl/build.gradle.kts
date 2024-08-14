@@ -38,9 +38,13 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = versions.composeCompiler
     }
+
 }
 
 dependencies {
+
+
+    implementation("com.google.firebase:firebase-auth:23.0.0")
 
     api(project(":detail_screen_feature:api"))
     implementation(project(":core"))
@@ -49,5 +53,8 @@ dependencies {
     implementation(libs.dagger)
     ksp(libs.daggerCompiler)
     implementation(libs.compose)
+    implementation(libs.coroutines)
     implementation(libs.paging)
+
+
 }

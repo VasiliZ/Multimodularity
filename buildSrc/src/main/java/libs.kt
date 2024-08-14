@@ -12,7 +12,7 @@ object versions {
     const val gson = "2.10.1"
     const val gsonConverter = "2.11.0"
     const val httpClient = "4.5.14"
-    const val paging = "3.3.1"
+    const val paging = "3.3.2"
 }
 
 object libs {

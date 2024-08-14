@@ -10,7 +10,7 @@ import com.example.core.navigarion.find
 import com.example.core_network.di.component.LocalDataProvider
 import com.example.mulrymodularity.mainscreen.impl.di.DaggerCatListComponent
 import com.example.multimodularity.detail.api.CatDetailsEntry
-import com.example.multymodularity.main_movie_screen.ui.CatListScreen
+import com.example.multymodularity.main_cat_screen.ui.CatListScreen
 import com.example.multymodularity.mainscreen.api.CatListEntry
 import javax.inject.Inject
 
