@@ -11,8 +11,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.core.common.di.LocalCommonProvider
 import com.example.core_network.di.LocalNetworkProvider
 import com.example.multimodularity.di.components.LocalAppProvider
-import com.example.multimodularity.ui.theme.MultimodularityTheme
 import com.example.multymodularity.data.impl.LocalDataProvider
+import com.example.multymodularity.ui_core.theme.MultimodularityTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -21,7 +21,6 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             MultimodularityTheme {
-
                 CompositionLocalProvider(
                     LocalAppProvider provides application.applicationProvider,
                     LocalCommonProvider provides application.applicationProvider,

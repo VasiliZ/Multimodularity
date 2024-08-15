@@ -1,4 +1,4 @@
-package com.example.multimodularity.ui.theme
+package com.example.multymodularity.ui_core.theme
 
 import androidx.compose.ui.graphics.Color
 
