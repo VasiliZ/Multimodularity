@@ -26,7 +26,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withLink
 import coil.compose.SubcomposeAsyncImage
-import com.example.multimodularity.details.impl.R
+import com.example.multymodularity.detail_screen_feature.impl.R
 import com.example.multymodularity.ui_core.ext.bottomPadding16
 import com.example.multymodularity.ui_core.ext.gradientColor
 import com.example.multymodularity.ui_core.ext.horizontalPadding16

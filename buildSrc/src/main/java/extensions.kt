@@ -23,3 +23,9 @@ fun DependencyHandler.testImplementation(dependencyNotation: List<Any>) {
         add("testImplementation", dep)
     }
 }
+
+fun DependencyHandler.ksp(dependencyNotation: List<Any>) {
+    for (dep in dependencyNotation) {
+        add("ksp", dep)
+    }
+}

@@ -36,8 +36,9 @@ object libs {
     const val dagger =
         "com.google.dagger:dagger:${versions.dagger}"
 
-    const val daggerCompiler =
+    val daggerCompiler = listOf(
         "com.google.dagger:dagger-compiler:${versions.dagger}"
+    )
 
     val retrofit = listOf(
         "com.squareup.retrofit2:retrofit:${versions.retrofit}",
