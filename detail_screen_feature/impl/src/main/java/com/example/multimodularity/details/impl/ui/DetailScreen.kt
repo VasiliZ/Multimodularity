@@ -25,6 +25,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withLink
 import coil.compose.SubcomposeAsyncImage
 import com.example.multimodularity.detail_screen_feature.impl.R
+import com.example.multymodularity.ui_core.composable.CatImageErrorPlaceHolder
 import com.example.multymodularity.ui_core.composable.VerticalGradientView
 import com.example.multymodularity.ui_core.ext.bottomPadding16
 import com.example.multymodularity.ui_core.ext.horizontalPadding16
@@ -49,7 +50,10 @@ fun CatDetailScreen(viewmodel: CatDetailViewmodel) {
                             .height(dimensionResource(R.dimen.cat_detail_image_height)),
                         model = cat.image,
                         contentDescription = null,
-                        contentScale = ContentScale.Crop
+                        contentScale = ContentScale.Crop,
+                        error = {
+                            CatImageErrorPlaceHolder()
+                        }
                     )
 
                     VerticalGradientView()

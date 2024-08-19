@@ -17,6 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import coil.compose.SubcomposeAsyncImage
 import com.example.multimodularity.main_screen_feature.impl.R
 import com.example.multymodularity.data.impl.domain.Cat
+import com.example.multymodularity.ui_core.composable.CatImageErrorPlaceHolder
 import com.example.multymodularity.ui_core.composable.VerticalGradientView
 import com.example.multymodularity.ui_core.ext.bottomPadding16
 import com.example.multymodularity.ui_core.ext.clipRoundedCorner8dp
@@ -45,7 +46,9 @@ fun CatItem(
                     Box(Modifier.fillMaxWidth()) {
                         CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                     }
-
+                },
+                error = {
+                    CatImageErrorPlaceHolder()
                 }
             )
 
