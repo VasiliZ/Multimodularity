@@ -3,11 +3,11 @@ package com.example.multimodularity.detail.api
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
-import com.example.core.navigarion.AggregateFeatureEntry
+import com.example.core.navigarion.ComposableFeatureEntry
 
 private const val NAVIGATE_PATH = "cat-details/"
 
-abstract class CatDetailsEntry : AggregateFeatureEntry {
+abstract class CatDetailsEntry : ComposableFeatureEntry {
 
     protected companion object {
         const val ARG_CAT_ID = "catId"
