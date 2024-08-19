@@ -14,5 +14,5 @@ data class CatItemResponse(
     @SerializedName("weight")
     val weight: CatWeight,
     @SerializedName("wikipedia_url")
-    val url: String
+    val url: String?
 )

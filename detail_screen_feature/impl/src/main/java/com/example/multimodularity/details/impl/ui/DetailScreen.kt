@@ -82,23 +82,25 @@ fun CatDetailScreen(viewmodel: CatDetailViewmodel) {
 
                 val uriHandler = LocalUriHandler.current
 
-                Text(
-                    buildAnnotatedString {
-                        append(stringResource(R.string.see_more_label))
+                if (cat.url != null) {
+                    Text(
+                        buildAnnotatedString {
+                            append(stringResource(R.string.see_more_label))
 
-                        val link =
-                            LinkAnnotation.Url(
-                                cat.url,
-                                TextLinkStyles(SpanStyle(color = Color.Blue))
-                            ) {
-                                val url = (it as LinkAnnotation.Url).url
-                                uriHandler.openUri(url)
-                            }
+                            val link =
+                                LinkAnnotation.Url(
+                                    cat.url!!,
+                                    TextLinkStyles(SpanStyle(color = Color.Blue))
+                                ) {
+                                    val url = (it as LinkAnnotation.Url).url
+                                    uriHandler.openUri(url)
+                                }
 
-                        withLink(link) { append(cat.name) }
-                    },
-                    modifier = Modifier.horizontalPadding16(),
-                )
+                            withLink(link) { append(cat.name) }
+                        },
+                        modifier = Modifier.horizontalPadding16(),
+                    )
+                }
             }
         }
     }

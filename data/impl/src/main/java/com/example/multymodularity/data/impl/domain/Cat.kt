@@ -6,5 +6,5 @@ data class Cat(
     val name: String,
     val description: String,
     val weight: String,
-    val url: String
+    val url: String?
 )
