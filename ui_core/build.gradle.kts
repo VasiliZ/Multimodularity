@@ -5,15 +5,10 @@ plugins {
 apply<ProjectLibraryPlugin>()
 
 android {
-    namespace = "com.example.multymodularity.ui_core"
-}
-
-android {
-    namespace = "com.example.multymodularity.ui_core"
+    namespace = "com.example.multimodularity.ui_core"
 }
 
 dependencies {
-
     implementation(libs.android)
     implementation(libs.compose)
 }

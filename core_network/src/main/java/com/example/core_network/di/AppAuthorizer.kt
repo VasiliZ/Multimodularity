@@ -1,6 +1,6 @@
 package com.example.core_network.di
 
-import com.example.core.BuildConfig
+import com.example.multimodularity.core.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Response
 

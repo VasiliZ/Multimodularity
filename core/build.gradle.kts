@@ -7,7 +7,7 @@ plugins {
 apply<ProjectLibraryPlugin>()
 
 android {
-    namespace = "com.example.core"
+    namespace = "com.example.multimodularity.core"
     defaultConfig {
         val apiKey = gradleLocalProperties(rootDir).getProperty("apiKey")
         buildConfigField("String", "API_KEY", "\"${apiKey}\"")

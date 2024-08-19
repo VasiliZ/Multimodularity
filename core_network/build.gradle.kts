@@ -5,7 +5,7 @@ plugins {
 apply<ProjectLibraryPlugin>()
 
 android {
-    namespace = "com.example.core_network"
+    namespace = "com.example.multimodularity.core_network"
 }
 
 dependencies {

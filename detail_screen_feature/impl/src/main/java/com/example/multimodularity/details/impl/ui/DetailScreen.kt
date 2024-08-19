@@ -1,6 +1,5 @@
 package com.example.multimodularity.details.impl.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +12,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
@@ -26,9 +24,9 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withLink
 import coil.compose.SubcomposeAsyncImage
-import com.example.multymodularity.detail_screen_feature.impl.R
+import com.example.multimodularity.detail_screen_feature.impl.R
+import com.example.multymodularity.ui_core.composable.VerticalGradientView
 import com.example.multymodularity.ui_core.ext.bottomPadding16
-import com.example.multymodularity.ui_core.ext.gradientColor
 import com.example.multymodularity.ui_core.ext.horizontalPadding16
 import com.example.multymodularity.ui_core.ext.space16
 
@@ -54,17 +52,7 @@ fun CatDetailScreen(viewmodel: CatDetailViewmodel) {
                         contentScale = ContentScale.Crop
                     )
 
-                    Box(
-                        Modifier
-                            .background(
-                                brush = Brush.verticalGradient(
-                                    colors = gradientColor
-                                )
-                            )
-                            .fillMaxWidth()
-                            .align(Alignment.BottomEnd)
-                            .height(dimensionResource(R.dimen.cat_detail_gradient_height))
-                    )
+                    VerticalGradientView()
 
                     Text(
                         modifier = Modifier

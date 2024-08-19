@@ -5,7 +5,7 @@ plugins {
 apply<ProjectLibraryPlugin>()
 
 android {
-    namespace = "com.example.multymodularity.data.api"
+    namespace = "com.example.multimodularity.data.api"
 }
 
 dependencies {

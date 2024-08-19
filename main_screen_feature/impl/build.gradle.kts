@@ -5,7 +5,7 @@ plugins {
 apply<ProjectLibraryPlugin>()
 
 android {
-    namespace = "com.example.multymodularity.main_screen_feature.impl"
+    namespace = "com.example.multimodularity.main_screen_feature.impl"
 }
 
 dependencies {

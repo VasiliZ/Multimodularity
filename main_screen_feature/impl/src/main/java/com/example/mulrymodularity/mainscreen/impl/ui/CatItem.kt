@@ -1,6 +1,5 @@
 package com.example.mulrymodularity.mainscreen.impl.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,17 +10,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.TextAlign
 import coil.compose.SubcomposeAsyncImage
+import com.example.multimodularity.main_screen_feature.impl.R
 import com.example.multymodularity.data.impl.domain.Cat
-import com.example.multymodularity.main_screen_feature.impl.R
+import com.example.multymodularity.ui_core.composable.VerticalGradientView
 import com.example.multymodularity.ui_core.ext.bottomPadding16
 import com.example.multymodularity.ui_core.ext.clipRoundedCorner8dp
-import com.example.multymodularity.ui_core.ext.gradientColor
 
 @Composable
 fun CatItem(
@@ -51,17 +49,7 @@ fun CatItem(
                 }
             )
 
-            Box(
-                Modifier
-                    .background(
-                        brush = Brush.verticalGradient(
-                            colors = gradientColor
-                        )
-                    )
-                    .fillMaxWidth()
-                    .align(Alignment.BottomEnd)
-                    .height(dimensionResource(R.dimen.cat_card_gradient_height))
-            )
+            VerticalGradientView()
 
             Text(
                 modifier = Modifier
