@@ -50,6 +50,10 @@ android {
             excludes += "/META-INF/DEPENDENCIES"
         }
     }
+
+    configurations.all {
+        resolutionStrategy.force("commons-codec:commons-codec:1.9")
+    }
 }
 
 dependencies {

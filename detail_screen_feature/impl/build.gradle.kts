@@ -10,8 +10,11 @@ android {
 
 dependencies {
 
-
-    implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation("org.apache.httpcomponents:httpclient")
+    constraints {
+        implementation("org.apache.httpcomponents:httpclient:4.5.3")
+        implementation("commons-codec:commons-codec:1.10")
+    }
 
     api(project(":detail_screen_feature:api"))
     implementation(project(":core"))

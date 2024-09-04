@@ -9,6 +9,9 @@ android {
 }
 
 dependencies {
+
+    implementation("org.apache.httpcomponents:httpclient:4.5.14")
+
     api(project(":main_screen_feature:api"))
     api(project(":detail_screen_feature:api"))
     implementation(project(":core"))
