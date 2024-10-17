@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.util.trace
 import coil.compose.SubcomposeAsyncImage
 import com.example.multimodularity.main_screen_feature.impl.R
 import com.example.multymodularity.data.impl.domain.Cat
@@ -26,7 +27,7 @@ import com.example.multymodularity.ui_core.ext.clipRoundedCorner8dp
 fun CatItem(
     cat: Cat,
     onCatItemClicked: (catId: String) -> Unit
-) {
+) = trace("CatListFeatureTrace") {
 
     Card(
         modifier = Modifier
@@ -34,7 +35,9 @@ fun CatItem(
             .clickable {
                 onCatItemClicked(cat.id)
             }
-    ) {
+    )
+
+    {
         Box {
             SubcomposeAsyncImage(
                 modifier = Modifier.height(dimensionResource(R.dimen.cat_card_height)),

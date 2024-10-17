@@ -13,6 +13,8 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24")
     implementation("com.android.tools.build:gradle:8.1.4")
+    implementation("com.android.test:com.android.test.gradle.plugin:8.7.0")
+    implementation("androidx.benchmark:benchmark-junit4:1.0.0")
 }
 
 val compileKotlin: KotlinCompile by tasks

@@ -7,6 +7,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
 import com.example.multimodularity.main_screen_feature.impl.R
 
@@ -16,6 +17,7 @@ fun LoadingListCatPartState() {
         modifier = Modifier
             .fillMaxWidth()
             .height(dimensionResource(R.dimen.append_list_loading_item_height))
+            .testTag("loadingPart")
     ) {
         CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
     }

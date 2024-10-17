@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.example.multymodularity.data.impl.domain.Cat
@@ -21,11 +22,11 @@ fun LoadedDataScreenState(
     catList: LazyPagingItems<Cat>,
     onCatItemClicked: (catId: String) -> Unit
 ) {
-
     LazyVerticalGrid(
         modifier = Modifier
             .padding16()
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .testTag("LazyVerticalCatGrid"),
         verticalArrangement = Arrangement.space16(),
         horizontalArrangement = Arrangement.space16(),
         columns = GridCells.Fixed(GRID_CELL_COUNT)
@@ -35,7 +36,6 @@ fun LoadedDataScreenState(
                 CatItem(it, onCatItemClicked)
             }
         }
-
 
         item(span = {
             GridItemSpan(LOADING_PART_SPAN_VALUE)
